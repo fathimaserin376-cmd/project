@@ -1,0 +1,153 @@
+:root {
+  --primary: #0a66ff;
+  --bg: #f6f7fb;
+  --card: #ffffff;
+  --text: #222;
+  --muted: #666;
+  --radius: 10px;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* header */
+.site-header {
+  background: var(--primary);
+  color: white;
+  padding: 18px 0;
+  box-shadow: 0 2px 6px rgba(10, 102, 255, 0.12);
+}
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.site-title {
+  margin: 0;
+  font-size: 1.6rem;
+}
+.nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 16px;
+  opacity: 0.95;
+}
+.nav a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+/* post */
+.post {
+  background: var(--card);
+  margin-top: 22px;
+  padding: 22px;
+  border-radius: var(--radius);
+  box-shadow: 0 6px 20px rgba(20, 30, 50, 0.04);
+}
+.post-title {
+  font-size: 1.5rem;
+  margin: 0 0 8px;
+}
+.post-meta {
+  color: var(--muted);
+  margin: 0 0 12px;
+}
+.post-image {
+  width: 50%;
+  max-height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  margin: 10px 0 14px;
+}
+.post-content {
+  font-size: 1rem;
+  color: var(--text);
+}
+
+/* comments */
+.comments {
+  margin-top: 18px;
+}
+.comment-list {
+  margin-bottom: 14px;
+}
+.comment {
+  background: #fbfbff;
+  border: 1px solid #eef2ff;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+.comment .who {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.comment .text {
+  color: var(--text);
+}
+
+/* form */
+.comment-form {
+  background: var(--card);
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid #eef2ff;
+}
+.comment-form input,
+.comment-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #d9e1ff;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+.comment-form button {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.comment-form button:hover {
+  opacity: 0.95;
+}
+
+/* footer */
+.site-footer {
+  margin-top: 28px;
+  padding: 12px 0;
+  background: transparent;
+  color: var(--muted);
+  text-align: center;
+}
+
+/* responsive */
+@media (max-width: 600px) {
+  .site-header .container {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  .site-title {
+    font-size: 1.3rem;
+  }
+}

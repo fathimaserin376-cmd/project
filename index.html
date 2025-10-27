@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>IBM NM - Blogsite</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <style>
+    :root {
+      --primary: #0a66ff;
+      --bg: #f6f7fb;
+      --card: #ffffff;
+      --text: #222;
+      --muted: #666;
+      --radius: 10px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* header */
+    .site-header {
+      background: var(--primary);
+      color: white;
+      padding: 18px 0;
+      box-shadow: 0 2px 6px rgba(10, 102, 255, 0.12);
+    }
+    .site-header .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .site-title {
+      margin: 0;
+      font-size: 1.6rem;
+    }
+    .nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 16px;
+      opacity: 0.95;
+    }
+    .nav a:hover {
+      opacity: 1;
+      text-decoration: underline;
+    }
+
+    /* post */
+    .post {
+      background: var(--card);
+      margin-top: 22px;
+      padding: 22px;
+      border-radius: var(--radius);
+      box-shadow: 0 6px 20px rgba(20, 30, 50, 0.04);
+    }
+    .post-title {
+      font-size: 1.5rem;
+      margin: 0 0 8px;
+    }
+    .post-meta {
+      color: var(--muted);
+      margin: 0 0 12px;
+    }
+    .post-image {
+      width: 50%;
+      max-height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      display: block;
+      margin: 10px 0 14px;
+    }
+    .post-content {
+      font-size: 1rem;
+      color: var(--text);
+    }
+
+    /* comments */
+    .comments {
+      margin-top: 18px;
+    }
+    .comment-list {
+      margin-bottom: 14px;
+    }
+    .comment {
+      background: #fbfbff;
+      border: 1px solid #eef2ff;
+      padding: 12px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+    .comment .who {
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .comment .text {
+      color: var(--text);
+    }
+
+    /* form */
+    .comment-form {
+      background: var(--card);
+      padding: 14px;
+      border-radius: 8px;
+      border: 1px solid #eef2ff;
+    }
+    .comment-form input,
+    .comment-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #d9e1ff;
+      border-radius: 6px;
+      font-size: 0.95rem;
+    }
+    .comment-form button {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+    .comment-form button:hover {
+      opacity: 0.95;
+    }
+
+    /* footer */
+    .site-footer {
+      margin-top: 28px;
+      padding: 12px 0;
+      background: transparent;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    /* responsive */
+    @media (max-width: 600px) {
+      .site-header .container {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+      }
+      .site-title {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <h1 class="site-title">My Blogsite</h1>
+        <nav class="nav">
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <article class="post" id="post-1">
+        <h2 class="post-title">First Blog Post</h2>
+        <p class="post-meta">By Admin | October 2025</p>
+        <img
+          src="data:image/jpeg;base64,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"
+          alt="Blog image"
+          class="post-image"
+        />
+        <p class="post-content">
+          This is an example of a simple blog post created for the Naan
+          Mudhalvan Front-End Project.
+        </p>
+      </article>
+
+      <section class="comments" aria-labelledby="comments-heading">
+        <h3 id="comments-heading">Comments</h3>
+
+        <div id="commentList" class="comment-list">
+          <!-- comments injected here -->
+        </div>
+
+        <div class="comment-form">
+          <input id="nameInput" type="text" placeholder="Your name" />
+          <textarea
+            id="commentInput"
+            rows="4"
+            placeholder="Write your comment..."
+          ></textarea>
+          <button id="postBtn">Post Comment</button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; 2025 My Blogsite | IBM NM Project</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
