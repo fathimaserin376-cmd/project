@@ -37,6 +37,7 @@ Users can revisit the page and still see their comments, depending on the storag
 ⚡ Lightweight & Fast: Built using HTML, CSS, and JavaScript (with optional PHP backend).
 ##conclusion
 Thank you for taking the time to read our blog! We hope you found the insights valuable and engaging. Your thoughts and experiences matter to us—feel free to share them in the comments below. Whether you have a question, feedback, or just want to join the discussion, we’d love to hear from you. Let’s keep the conversation going and continue learning together!
-Deployment link:
-Repository link:
+Deployment link: https://fathimaserin376-cmd.github.io/project/
+Repository link: 
+
      developed by FATHIMA SHERIN M
